@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-kafka-avro-demo
+
+  kafka:
+    bootstrap-servers: localhost:9092
