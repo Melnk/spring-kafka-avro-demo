@@ -1,1 +1,88 @@
-"*.jar" 
+# Создаем новый .gitignore файл
+echo "# Created: $(date)
+# Java + Maven/Gradle + IntelliJ IDEA
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# NetBeans
+nbproject/
+nbactions.xml
+.nb-gradle/
+
+# VS Code
+.vscode/
+bin/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+logs/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# JAR files
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Package Files
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# Docker
+docker-compose.override.yml
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Application specific
+config/application-*.properties
+*.ser
+*.key
+*.cert
+
+# Temporary files
+tmp/
+temp/" > .gitignore
