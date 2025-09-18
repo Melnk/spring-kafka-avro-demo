@@ -2,11 +2,11 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.5.5'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id 'com.github.davidmc24.gradle.plugin.avro' version '1.9.1'
 }
 
 group = 'ru.javabegin.micro.demo'
 version = '0.0.1-SNAPSHOT'
-description = 'backend'
 
 java {
 	toolchain {
@@ -19,6 +19,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.apache.avro:avro:1.11.0'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.kafka:spring-kafka'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -29,3 +30,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// 👇 Правильная конфигурация Avro
+sourceSets.main.java.srcDirs += "$buildDir/generated-main-avro-java"
