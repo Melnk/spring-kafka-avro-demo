@@ -16,9 +16,15 @@ java {
 
 repositories {
 	mavenCentral()
+	maven {
+		url "https://packages.confluent.io/maven/"
+		allowInsecureProtocol = true // если Gradle ругается на http/https
+	}
 }
 
+
 dependencies {
+	implementation "io.confluent:kafka-avro-serializer:7.7.1"
 	implementation 'org.apache.avro:avro:1.11.0'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.kafka:spring-kafka'
