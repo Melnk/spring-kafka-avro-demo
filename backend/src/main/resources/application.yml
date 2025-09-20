@@ -4,5 +4,10 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    consumer:
+      group-id: user-service-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
     properties:
-      schema.registry.url: http://localhost:8081 #Было localhost:8081
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
