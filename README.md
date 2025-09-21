@@ -13,15 +13,12 @@ Microservice for asynchronous user management based on event architecture. The s
 · Willingness to scale and add new customers
 
 ## Technological stack:
-· Java/Spring Boot
-
-· Apache Kafka
-
-· Apache Avro
-
-· REST API
-
-· Spring Cloud Stream, Schema Registry
+- Java 17, Spring Boot
+- Apache Kafka, Schema Registry
+- Avro (data serialization)
+- Docker, Docker Compose
+- Swagger / OpenAPI
+- Spring Actuator
 
 
 The project demonstrates work with modern patterns of distributed systems and event-driven architecture.
